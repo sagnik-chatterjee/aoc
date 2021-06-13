@@ -1,4 +1,4 @@
-'''
+"""
 def main():
     input_stream = []
     f = open("input.txt", "r")
@@ -33,13 +33,13 @@ def main():
 
 if __name__ == "__main__":
     main()
-'''
+"""
 import fileinput
 
 if __name__ == "__main__":
-    count=0
+    count = 0
 
-    for policy_with_password in fileinput.input(files='input.txt'):
+    for policy_with_password in fileinput.input(files="input.txt"):
         # Parse line (policy_with_password) like "3-11 k: password"
         rule, pw = policy_with_password.split(": ", maxsplit=1)
         minmax, symbol = rule.split(" ", maxsplit=1)
@@ -48,11 +48,10 @@ if __name__ == "__main__":
         # Count number of occurrences of symbol in pw
         num_symbols = pw.count(symbol)
 
-        
         # Check that the character at lower is the same as symbol or that the character
         # at upper is the same as symbol, note that not both are allowed (thus the
         # "exclusive or" ^).
         if (pw[lower - 1] is symbol) ^ (pw[upper - 1] is symbol):
             count += 1
 
-    print(f"Toboggan password policy matches {count})
+    print(count)
