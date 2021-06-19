@@ -1,0 +1,1 @@
+/home/sagnik/Programming/aoc/2018/soln/target/debug/soln: /home/sagnik/Programming/aoc/2018/soln/src/day1.rs /home/sagnik/Programming/aoc/2018/soln/src/day1input.txt /home/sagnik/Programming/aoc/2018/soln/src/main.rs
